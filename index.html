@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - พิชชาพร สารคะณา</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Segoe UI', sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      line-height:1.6;
+    }
+
+    nav{
+      background:#111827;
+      padding:15px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h1{
+      color:#38bdf8;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#38bdf8;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .home{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      min-height:100vh;
+    }
+
+    .home-text{
+      flex:1;
+    }
+
+    .home-text h2{
+      font-size:50px;
+      color:#38bdf8;
+    }
+
+    .home-text p{
+      margin:20px 0;
+      font-size:18px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 25px;
+      background:#38bdf8;
+      color:black;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:white;
+    }
+
+    .profile-img{
+      flex:1;
+      text-align:center;
+    }
+
+    .profile-img img{
+      width:300px;
+      height:300px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid #38bdf8;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:40px;
+      font-size:40px;
+      color:#38bdf8;
+    }
+
+    .about-box{
+      background:#1e293b;
+      padding:30px;
+      border-radius:15px;
+    }
+
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .skill-card{
+      background:#1e293b;
+      padding:20px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .skill-card i{
+      font-size:50px;
+      margin-bottom:15px;
+      color:#38bdf8;
+    }
+
+    .progress{
+      background:#334155;
+      border-radius:20px;
+      overflow:hidden;
+      margin-top:10px;
+    }
+
+    .progress-bar{
+      height:10px;
+      background:#38bdf8;
+    }
+
+    .portfolio-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .portfolio-card{
+      background:#1e293b;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .portfolio-card:hover{
+      transform:scale(1.03);
+    }
+
+    .portfolio-card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .portfolio-content{
+      padding:20px;
+    }
+
+    .certificate-container,
+    .blog-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:20px;
+      border-radius:15px;
+      text-align:center;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      font-size:18px;
+    }
+
+    .contact i{
+      color:#38bdf8;
+      margin-right:10px;
+    }
+
+    footer{
+      background:#111827;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+      .home{
+        flex-direction:column-reverse;
+        text-align:center;
+      }
+
+      .home-text h2{
+        font-size:35px;
+      }
+
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Portfolio</h1>
+
+    <ul>
+      <li><a href="#home">หน้าแรก</a></li>
+      <li><a href="#about">เกี่ยวกับ</a></li>
+      <li><a href="#skills">ทักษะ</a></li>
+      <li><a href="#portfolio">ผลงาน</a></li>
+      <li><a href="#certificates">เกียรติบัตร</a></li>
+      <li><a href="#blog">กิจกรรม</a></li>
+      <li><a href="#contact">ติดต่อ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home -->
+  <section class="home" id="home">
+
+    <div class="home-text">
+      <h2>นางสาวพิชชาพร สารคะณา</h2>
+
+      <h3>นักศึกษาแผนกวิชาเทคโนโลยีสารสนเทศ</h3>
+
+      <p>
+        สวัสดีค่ะ ดิฉัน นางสาวพิชชาพร สารคะณา
+      </p>
+
+      <a href="#portfolio" class="btn">ดูผลงาน</a>
+    </div>
+
+    <div class="profile-img">
+      <img src="img/pach.jpg" alt="">
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about">
+
+    <h1 class="title">About Me</h1>
+
+    <div class="about-box">
+
+      <p><strong>ชื่อ :</strong> นางสาวพิชชาพร สารคะณา</p>
+
+      <p><strong>อายุ :</strong> 19 ปี</p>
+
+      <p><strong>ที่อยู่ :</strong> บ.ท่าวารี ต.ท่าศิลา อ.ส่องดาว จ.สกลนคร 47190</p>
+
+      <p><strong>การศึกษา :</strong> ปัจจุบันศึกษาอยู่ที่วิทยาลัยเทคนิคสว่างแดนดิน</p>
+
+      <p><strong>ประสบการณ์ :</strong> ได้รับการฝึกประสบการณ์จากบริษัท CP ALL</p>
+
+      <p><strong>เป้าหมาย :</strong> เป็นคนที่ประสบความสำเร็จและมีฐานะมั่นคง</p>
+
+      <p><strong>ความสามารถพิเศษ :</strong> เล่นกีฬา</p>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+
+    <h1 class="title">Skills</h1>
+
+    <div class="skills-container">
+
+      <div class="skill-card">
+        <i class="fab fa-html5"></i>
+        <h3>HTML</h3>
+
+        <div class="progress">
+          <div class="progress-bar" style="width:90%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fab fa-css3-alt"></i>
+        <h3>CSS</h3>
+
+        <div class="progress">
+          <div class="progress-bar" style="width:85%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fab fa-js"></i>
+        <h3>JavaScript</h3>
+
+        <div class="progress">
+          <div class="progress-bar" style="width:75%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fab fa-java"></i>
+        <h3>Java</h3>
+
+        <div class="progress">
+          <div class="progress-bar" style="width:70%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-network-wired"></i>
+        <h3>Networking</h3>
+
+        <div class="progress">
+          <div class="progress-bar" style="width:80%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fab fa-linux"></i>
+        <h3>Linux</h3>
+
+        <div class="progress">
+          <div class="progress-bar" style="width:65%"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+
+    <h1 class="title">Portfolio</h1>
+
+    <div class="portfolio-container">
+
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+
+        <div class="portfolio-content">
+          <h3>เว็บไซต์แนะนำตัว</h3>
+          <p>เว็บไซต์ Portfolio ส่วนตัว</p>
+          <p>HTML CSS JavaScript</p>
+
+          <a href="#" class="btn">GitHub</a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284" alt="">
+
+        <div class="portfolio-content">
+          <h3>ระบบจองห้อง</h3>
+          <p>ระบบจองห้องออนไลน์</p>
+          <p>PHP MySQL Bootstrap</p>
+
+          <a href="#" class="btn">GitHub</a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="">
+
+        <div class="portfolio-content">
+          <h3>Network Lab</h3>
+          <p>งานทดลองระบบเครือข่าย</p>
+          <p>MikroTik Linux</p>
+
+          <a href="#" class="btn">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+
+    <h1 class="title">Certificates</h1>
+
+    <div class="certificate-container">
+
+      <div class="card">
+        <h3>HTML & CSS</h3>
+        <p>ได้รับเกียรติบัตรการอบรม HTML CSS</p>
+        <p>2025</p>
+      </div>
+
+      <div class="card">
+        <h3>MikroTik Training</h3>
+        <p>ผ่านการอบรม MikroTik เบื้องต้น</p>
+        <p>2025</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Blog -->
+  <section id="blog">
+
+    <h1 class="title">Activities</h1>
+
+    <div class="blog-container">
+
+      <div class="card">
+        <h3>การสอน Front-End</h3>
+        <p>กิจกรรมแบ่งปันความรู้การสร้างเว็บไซต์</p>
+      </div>
+
+      <div class="card">
+        <h3>ติดตั้ง MikroTik</h3>
+        <p>ฝึกปฏิบัติการตั้งค่าเครือข่าย</p>
+      </div>
+
+      <div class="card">
+        <h3>กิจกรรมวิทยาลัย</h3>
+        <p>เข้าร่วมกิจกรรมภายในวิทยาลัย</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+
+    <h1 class="title">Contact</h1>
+
+    <p><i class="fas fa-envelope"></i> 68319010019@swdtcmail.com</p>
+
+    <p><i class="fas fa-phone"></i> 0988188571</p>
+
+    <p><i class="fab fa-facebook"></i> มายพัช</p>
+
+    <p><i class="fab fa-line"></i> PICHAPORN</p>
+
+    <p><i class="fab fa-github"></i> GitHub</p>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2026 Portfolio | Designed by พิชชาพร สารคะณา
+    </p>
+  </footer>
+
+</body>
+</html>
